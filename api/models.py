@@ -3,8 +3,6 @@ from django.db import models
 # Create your models here.
 
 class Target(models.Model):
-    title = models.CharField(max_length=50)
-
     target1_1 = models.CharField(max_length=50,blank=True)
     target1_2 = models.CharField(max_length=50,blank=True)
     target1_3 = models.CharField(max_length=50,blank=True)
