@@ -30,7 +30,6 @@ class TargetSerializer(serializers.ModelSerializer):
             'target1_7',
             'target1_8',
             'target1_9',
-
             'target2_1',
             'target2_2',
             'target2_3',
@@ -40,7 +39,6 @@ class TargetSerializer(serializers.ModelSerializer):
             'target2_7',
             'target2_8',
             'target2_9',
-
             'target3_1',
             'target3_2',
             'target3_3',
@@ -50,7 +48,6 @@ class TargetSerializer(serializers.ModelSerializer):
             'target3_7',
             'target3_8',
             'target3_9',
-
             'target4_1',
             'target4_2',
             'target4_3',
@@ -60,17 +57,15 @@ class TargetSerializer(serializers.ModelSerializer):
             'target4_7',
             'target4_8',
             'target4_9',
-
             'target5_1',
             'target5_2',
             'target5_3',
             'target5_4',
-            'main_target',
+            'target',
             'target5_6',
             'target5_7',
             'target5_8',
             'target5_9',
-
             'target6_1',
             'target6_2',
             'target6_3',
@@ -80,7 +75,6 @@ class TargetSerializer(serializers.ModelSerializer):
             'target6_7',
             'target6_8',
             'target6_9',
-
             'target7_1',
             'target7_2',
             'target7_3',
@@ -90,7 +84,6 @@ class TargetSerializer(serializers.ModelSerializer):
             'target7_7',
             'target7_8',
             'target7_9',
-
             'target8_1',
             'target8_2',
             'target8_3',
@@ -100,7 +93,6 @@ class TargetSerializer(serializers.ModelSerializer):
             'target8_7',
             'target8_8',
             'target8_9',
-
             'target9_1',
             'target9_2',
             'target9_3',
@@ -110,6 +102,5 @@ class TargetSerializer(serializers.ModelSerializer):
             'target9_7',
             'target9_8',
             'target9_9',
-
             'created_at'
         )

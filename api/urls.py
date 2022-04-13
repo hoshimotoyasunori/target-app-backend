@@ -3,6 +3,7 @@ from django.conf.urls import include
 from rest_framework import routers
 from api.views import CreateUserView,TargetListView,TargetRetrieveView,TargetViewSet
 
+
 router = routers.DefaultRouter()
 router.register('targets',TargetViewSet,basename='targets')
 
