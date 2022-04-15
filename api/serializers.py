@@ -32,7 +32,7 @@ class MiddleSerializer(serializers.ModelSerializer):
         model = Middle
         fields = (
             'id',
-            'target_large'
+            'target_large',
             'middle',
             'created_at'
         )
@@ -44,7 +44,7 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = (
             'id',
-            'target_middle'
+            'target_middle',
             'task',
             'created_at'
         )
