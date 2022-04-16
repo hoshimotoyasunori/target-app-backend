@@ -27,7 +27,7 @@ class LargeSerializer(serializers.ModelSerializer):
 
 class MiddleSerializer(serializers.ModelSerializer):
     created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
-
+    target_large = serializers.StringRelatedField()
     class Meta:
         model = Middle
         fields = (
@@ -39,7 +39,7 @@ class MiddleSerializer(serializers.ModelSerializer):
 
 class TaskSerializer(serializers.ModelSerializer):
     created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
-
+    target_middle = serializers.StringRelatedField()
     class Meta:
         model = Task
         fields = (
