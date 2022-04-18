@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import Large,Middle,Task
+from .models import Target
 
 # Register your models here.
 
-admin.site.register(Large)
-admin.site.register(Middle)
-admin.site.register(Task)
+admin.site.register(Target)
