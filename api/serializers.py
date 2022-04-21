@@ -14,6 +14,7 @@ class TargetSerializer(serializers.ModelSerializer):
         model = Target
         fields = (
             # 'user_id',
+            'user',
             'id',
             'target1_1',
             'target1_2',
