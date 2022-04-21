@@ -5,7 +5,8 @@ from django.contrib.auth.models import User
 
 class Target(models.Model):
 
-    user = models.ForeignKey(User, verbose_name='ユーザー', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='ユーザー', on_delete=models.CASCADE,related_name='user_target')
+    
     target1_1 = models.CharField(max_length=50,blank=True, verbose_name='1-1')
     target1_2 = models.CharField(max_length=50,blank=True, verbose_name='1-2')
     target1_3 = models.CharField(max_length=50,blank=True, verbose_name='1-3')

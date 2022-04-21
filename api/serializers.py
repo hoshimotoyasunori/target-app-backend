@@ -3,27 +3,17 @@ from django.contrib.auth.models import User
 from .models import Target
 
 
-class UserSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = User
-        fields = ('id', 'username', 'password')
-        extra_kwargs = {'password': {'write_only': True, 'required': True}}
-
-    def create(self, validated_data):
-        user = User.objects.create_user(**validated_data)
-        return user
-
 
 class TargetSerializer(serializers.ModelSerializer):
     created_at = serializers.DateTimeField(
         format="%Y-%m-%d %H:%M:%S", read_only=True)
-    user_id = serializers.StringRelatedField()
+    # user_id = serializers.StringRelatedField()
+    # user_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(),source='user.id')
 
     class Meta:
         model = Target
         fields = (
-            'user_id',
+            # 'user_id',
             'id',
             'target1_1',
             'target1_2',
@@ -108,3 +98,18 @@ class TargetSerializer(serializers.ModelSerializer):
             'target9_9',
             'created_at',
         )
+
+
+class UserSerializer(serializers.ModelSerializer):
+
+    target = TargetSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'password','target')
+        extra_kwargs = {'password': {'write_only': True, 'required': True}}
+
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        return user
+
